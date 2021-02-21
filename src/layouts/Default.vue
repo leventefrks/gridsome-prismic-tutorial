@@ -1,13 +1,5 @@
 <template>
   <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">Gridsome</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-      </nav>
-    </header>
     <slot />
   </div>
 </template>
@@ -19,24 +11,21 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.5;
+  min-height: 100vh;
 }
 
 .layout {
-  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
-
-.nav__link {
-  margin-left: 20px;
+.layout img {
+  max-width: 200px;
+  flex-shrink: 0;
+  height: 100%;
 }
 </style>
